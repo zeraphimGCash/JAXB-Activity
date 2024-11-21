@@ -3,9 +3,11 @@ package com.xml.demo;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
 
+@SpringBootApplication
 public class JAXBExample {
     public static void main(String[] args) {
         Customer customer = new Customer();

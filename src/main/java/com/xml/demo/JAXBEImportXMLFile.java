@@ -3,9 +3,11 @@ package com.xml.demo;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.File;
 
+@SpringBootApplication
 public class JAXBEImportXMLFile {
     public static void main(String[] args) {
         // Import File

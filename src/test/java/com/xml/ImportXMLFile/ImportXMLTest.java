@@ -1,5 +1,6 @@
-package com.xml.demo;
+package com.xml.ImportXMLFile;
 
+import com.xml.importXMLFile.Customer;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
@@ -10,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.io.File;
 
 @SpringBootTest
-class DemoApplicationTests {
+class ImportXMLTest {
 
 	private boolean isValidXML(File xmlFile) {
 		try {
@@ -35,19 +36,19 @@ class DemoApplicationTests {
 
 	@Test
 	void testValidXMLFile() {
-		File validXMLFile = new File("src/main/java/com/xml/demo/sample1.xml");
+		File validXMLFile = new File("src/main/java/com/xml/ImportXMLFile/sample1.xml");
 		Assertions.assertTrue(isValidXML(validXMLFile), "The XML file should be valid.");
 	}
 
 	@Test
 	void testInvalidXMLFile() {
-		File invalidXMLFile = new File("src/main/java/com/xml/demo/invalid.xml");
+		File invalidXMLFile = new File("src/main/java/com/xml/ImportXMLFile/invalid.xml");
 		Assertions.assertFalse(isValidXML(invalidXMLFile), "The XML file should be invalid.");
 	}
 
 	@Test
 	void testContent() {
-		File validXMLFile = new File("src/main/java/com/xml/demo/sample1.xml");
+		File validXMLFile = new File("src/main/java/com/xml/ImportXMLFile/sample1.xml");
 		Customer customer = parseXML(validXMLFile);
 		Assertions.assertNotNull(customer, "The XML file should be valid.");
 		Assertions.assertEquals(99, customer.getId(), "Customer ID: 99");

@@ -1,5 +1,6 @@
-package com.xml.demo;
+package com.xml.importXMLFile;
 
+import com.xml.demo.Customer;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
@@ -11,7 +12,7 @@ import java.io.File;
 public class JAXBEImportXMLFile {
     public static void main(String[] args) {
         // Import File
-        File xmlFile = new File("src/main/java/com/xml/demo/sample1.xml");
+        File xmlFile = new File("src/main/java/com/xml/ImportXMLFile/sample1.xml");
 
         if (!xmlFile.exists() || !xmlFile.isFile()) {
             System.out.println("The file 'sample1.xml' does not exist in the expected location: " + xmlFile.getAbsolutePath());
